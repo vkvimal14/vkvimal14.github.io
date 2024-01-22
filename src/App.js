@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 function App() {
   const [chat, setChat] = useState([
     {
-      text: 'Ask me anything related to Rajasthan Government?',
+      text: 'Ask me anything related to Rajasthan Government? change test',
       sender: 'bot',
     },
   ]);
