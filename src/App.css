@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
-}
+/* app.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	background-color: #f8f8f8;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .chat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .message-container {
+	width: 100%;
   }
-}
+  
+  .message {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+  }
+  
+  .user .bubble,
+  .bot .bubble {
+	max-width: 70%;
+	padding: 12px 20px;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 5px;
+  }
+  
+  .user .bubble {
+	background: #007bff;
+	color: white;
+	align-self: flex-start;
+  }
+  
+  .bot .bubble {
+	background: #f1f1f1;
+	color: #333;
+	align-self: flex-end;
+  }
+  
+  .bot .avatar {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: #007bff;
+	margin-right: 10px;
+  }
+  
+  /* faded animation */
+  .fade-enter {
+	opacity: 0;
+  }
+  .fade-enter-active {
+	opacity: 1;
+	transition: opacity 200ms;
+  }
+  
+  /* Input and Button styles */
+  .input-container {
+	display: flex;
+	width: 100%;
+  }
+  
+  input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px 0 0 5px;
+	font-size: 16px;
+  }
+  
+  button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+  }
+  
+  /* Loader styles */
+  .loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .spinner {
+	border: 4px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top: 4px solid #007bff;
+	width: 24px;
+	height: 24px;
+	animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
