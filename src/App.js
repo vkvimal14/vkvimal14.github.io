@@ -36,20 +36,20 @@ function App() {
   
 	setChat((prevChat) => [...prevChat, botMessage]); // Show bot's response
   
-	await AsyncStorage.setItem(
-	  'chatHistory',
-	  JSON.stringify([
-		...chatHistory,
-		{ role: 'user', text: input  },
-		{ role: 'model', text: botResponse  },
-	  ])
-	);
+	// await AsyncStorage.setItem(
+	//   'chatHistory',
+	//   JSON.stringify([
+	// 	...chatHistory,
+	// 	{ role: 'user', text: input  },
+	// 	{ role: 'model', text: botResponse  },
+	//   ])
+	// );
   
-	setChatHistory([
-	  ...chatHistory,
-	  { role: 'user', text: input  },
-	  { role: 'model', text: botResponse  },
-	]);
+	// setChatHistory([
+	//   ...chatHistory,
+	//   { role: 'user', text: input  },
+	//   { role: 'model', text: botResponse  },
+	// ]);
   
 	setIsLoading(false);
 	setInput('');
